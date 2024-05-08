@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import Button from "../button/Button";
 const Navbar = () => {
   return (
-    <div className="navbar bg-[#A1D6E2]">
+    <div className="navbar px-5 bg-[#A1D6E2]">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -46,6 +46,26 @@ const Navbar = () => {
                 ADDBOOKS
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="/update"
+                className={({ isActive }) =>
+                  isActive ? "text-[#1995AD] font-bold " : "text-black"
+                }
+              >
+                Update
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/viewbook"
+                className={({ isActive }) =>
+                  isActive ? "text-[#1995AD] font-bold " : "text-black"
+                }
+              >
+                View
+              </NavLink>
+            </li>
           </ul>
         </div>
         <h1 className="font-bold text-xl">
@@ -72,6 +92,16 @@ const Navbar = () => {
               }
             >
               ADDBOOKS
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/viewbook"
+              className={({ isActive }) =>
+                isActive ? "text-[#1995AD] font-bold " : "text-black"
+              }
+            >
+              View
             </NavLink>
           </li>
         </ul>

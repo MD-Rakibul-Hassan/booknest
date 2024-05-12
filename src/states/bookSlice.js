@@ -1,5 +1,6 @@
-import  { createSlice }  from "@reduxjs/toolkit";
-
+import { createSlice } from "@reduxjs/toolkit";
+import { app,auth } from '../firebase/firebase.init';
+import {GoogleAuthProvider} from 'firebase/auth'
 
 const initalBooks = {
     books: [
@@ -14,8 +15,7 @@ const initalBooks = {
             author: 'Hassan Shehab'
         }
     ],
-    addToCard:[]
-
+    addToCard: [],
 };
 
 export const bookSlice = createSlice({
@@ -41,6 +41,7 @@ export const bookSlice = createSlice({
             state.addToCard.push(action.payload);
             localStorage.setItem("book",JSON.stringify(state.addToCard))
         }
+        
     }
 });
 

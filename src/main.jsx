@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Login from "./pages/Login.jsx";
 import Home from "./pages/Home.jsx";
 import AddBook from "./pages/AddBook.jsx";
 import ViewBook from "./pages/ViewBook.jsx";
@@ -29,6 +30,10 @@ const route = createBrowserRouter([
       {
         path: 'update',
         element:<UpdateBook />
+      },
+      {
+        path: 'login',
+        element:<Login />
       }
     ]
   },
